@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENT TECH | Iluminación y efectos para eventos</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>EVENT TECH</h1>
+            <p>Iluminación y tecnología para eventos</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#carrito">Carrito <span id="contador-carrito">0</span></a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="portada">
+            <div class="portada-contenido">
+                <h2>Haz que cada evento sea inolvidable</h2>
+                <p>Equipos de iluminación y efectos especiales para DJs, discotecas, Pick Ups y eventos.</p>
+                <a href="#productos" class="boton">Explorar catálogo</a>
+            </div>
+        </section>
+
+        <!-- Lugar donde aparecen los productos -->
+        <section id="productos" class="seccion">
+            <h2>Nuestros equipos</h2>
+            <p>Descubre nuestra selección de iluminación, controladores y efectos especiales.</p>
+            <div id="catalogo" class="catalogo"></div>
+        </section>
+
+        <!-- Productos que se van agregando al carrito -->
+        <section id="carrito" class="seccion">
+            <h2>Tu carrito de compras</h2>
+            <div id="lista-carrito">
+                <p>Tu carrito está vacío.</p>
+            </div>
+            <div class="resumen">
+                <p>Cantidad de unidades: <span id="total-unidades">0</span></p>
+                <p>Subtotal: <span id="subtotal">$0</span></p>
+                <p>Costo de envío: <span id="costo-envio">$0</span></p>
+                <h3>Total a pagar: <span id="total-compra">$0</span></h3>
+                <button id="vaciar-carrito" type="button">Vaciar carrito</button>
+            </div>
+        </section>
+
+        <!-- Datos del cliente para hacer el pedido -->
+        <section id="compra" class="seccion">
+            <h2>Finalizar compra</h2>
+            <form id="formulario-compra">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" required>
+
+                <label for="correo">Correo electrónico</label>
+                <input type="email" id="correo" required>
+
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" required>
+
+                <label for="direccion">Dirección de entrega</label>
+                <input type="text" id="direccion" required>
+
+                <button type="submit">Confirmar compra</button>
+            </form>
+            <div id="confirmacion" role="status" aria-live="polite"></div>
+        </section>
+    </main>
+
+    <!-- Mensaje que sale al agregar un producto -->
+    <div id="aviso-carrito" role="status" aria-live="polite"></div>
+
+    <!-- Información de la tienda -->
+    <footer id="contacto">
+        <h3>EVENT TECH</h3>
+        <p>Iluminación, sonido y tecnología para tus eventos.</p>
+        <p>Barranquilla, Colombia</p>
+        <p>© 2026 EVENT TECH. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
